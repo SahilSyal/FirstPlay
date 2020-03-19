@@ -6,7 +6,7 @@
   tasks:
     - name: Print Extra variables passed via Curl 
       debug:
-        msg: {{ IP }}  {{ MAC }}
+        msg: "{{ IP }}  {{ MAC }}"
       register: Ip_Details
       
     - name: concatenate into a file
