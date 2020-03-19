@@ -11,3 +11,6 @@
       
     - name: concatenate into a file
       shell: echo "{{ IP }}  {{ MAC }}" >> /tmp/INV
+
+
+###curl -s -k -XPOST -H "Content-Type: application/json" -d '{"extra_vars": {"IP": "192.168.1.100", "MAC": "ABCD:DEFC" }}' --user admin:redhat https://192.168.1.175/api/v2/job_templates/2/launch
