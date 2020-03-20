@@ -6,11 +6,11 @@
   tasks:
     - name: Print Extra variables passed via Curl 
       debug:
-        msg: "{{ IP }}  {{ MAC }}"
+        msg: "{{ IP }}"
       register: Ip_Details
       
     - name: concatenate into a file
-      shell: echo "{{ IP }}  {{ MAC }}" >> /tmp/INV
+      shell: echo "{{ IP }}" >> /tmp/INV
 
 
 ###curl -s -k -XPOST -H "Content-Type: application/json" -d '{"extra_vars": {"IP": "192.168.1.100", "MAC": "ABCD:DEFC" }}' --user admin:redhat https://192.168.1.175/api/v2/job_templates/2/launch
